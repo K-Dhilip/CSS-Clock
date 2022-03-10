@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: blueviolet;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 30px;
+  margin-top: 10%;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* top part */
+.top {
+  width: 10px;
+  height: 15px;
+  background-color: #000;
+  position: relative;
+  left: 170px;
+  box-shadow: 4px 5px 10px rgb(36, 36, 36);
+}
+
+.top::before {
+  content: "";
+  width: 30px;
+  height: 8px;
+  background-color: #000;
+  position: absolute;
+  right: -10px;
+  border-radius: 20px;
+  box-shadow: 4px 5px 10px rgb(36, 36, 36);
+}
+
+/* bottom part */
+
+.bottom {
+  width: 10px;
+  height: 25px;
+  background-color: #000;
+  position: relative;
+  left: 113px;
+  bottom: 25px;
+  transform: rotate(45deg);
+  border-radius: 5px;
+}
+
+.bottom::before {
+  content: "";
+  width: 10px;
+  height: 25px;
+  background-color: #000;
+  position: absolute;
+  border-radius: 5px;
+  right: -82px;
+  bottom: 80px;
+  transform: rotate(90deg);
+}
+
+/* container */
+.clock-office,
+.clock-home {
+  width: 350px;
+  text-align: center;
+}
+
+/* text-part */
+h1,
+p {
+  text-align: center;
+  margin: 30px;
+  font-family: sans-serif;
+  font-weight: 650;
+  font-size: 2rem;
+  color: yellow;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 3rem;
+  letter-spacing: 8px;
+}
+
+/* main-clock */
+
+.box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: 10px solid #000;
+  display: flex;
+  justify-content: left;
+  margin: auto;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  box-shadow: 4px 5px 10px rgb(36, 36, 36);
+}
+
+.box::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 5px;
+  background-color: rgb(211, 0, 0);
+  border-radius: 20px;
+  animation: rote 2s infinite linear;
+  margin-left: 30px;
+}
+
+.box-off {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: 10px solid #000;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  box-shadow: 4px 5px 10px rgb(36, 36, 36);
+}
+
+.box-off::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 5px;
+  background-color: rgb(211, 0, 0);
+  border-radius: 20px;
+  animation: rote 30s infinite linear;
+  margin-left: 30px;
+}
+
+.clock-off {
+  width: 80px;
+  height: 5px;
+  background-color: rgb(31, 0, 0);
+  border-radius: 20px;
+  margin-left: 10px;
+  animation: rot 60s infinite linear;
+}
+
+.clock {
+  width: 80px;
+  height: 5px;
+  background-color: rgb(31, 0, 0);
+  border-radius: 20px;
+  margin-left: 10px;
+  animation: rot 1s infinite linear;
+}
+
+/* animation */
+
+@keyframes rot {
+  from {
+    transform: rotate(0deg);
+    transform-origin: right;
+  }
+  to {
+    transform: rotate(360deg);
+    transform-origin: right;
+  }
+}
+
+@keyframes rote {
+  from {
+    transform: rotate(0deg);
+    transform-origin: right;
+  }
+  to {
+    transform: rotate(360deg);
+    transform-origin: right;
+  }
+}
